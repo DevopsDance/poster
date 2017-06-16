@@ -18,10 +18,10 @@
     .navbar-default .navbar-brand,
     .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover,
     .navbar-default .navbar-nav>li>a {
-      color: #4144FF;
+      text-decoration: underline;
+      color: #000;
     }
     .black-label {
-      font-family:courier;
       font-size:14px;
       padding:6px 11px;
       background:#112;
@@ -33,9 +33,16 @@
       font-size: 22px;
       margin-bottom: 15px;
     }
+    body {
+        font-family: 'roboto';
+    }
+    .face-name {
+      color: #373737;
+      font-size: 24px;
+    }
   </style>
 </head>
-<body>
+<body style="opacity:0;margin-top:50px;">
   <nav class="navbar navbar-default">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -62,13 +69,15 @@
     <div class="row">
       <div class="col-md-12">
         <center>
-          <img src="./static/dance-logo.png" style="width:320px;height:232px" />
+          <img src="./static/dd2.png" style="height:270px" />
         </center>
 
+        <!--
         <div style="color:#A2A2A2;text-align:center;margin-top:5px;">
           <span style="font-family:serif;font-style:italic;font-size:18px;">"Incredibly skilled, mostly sober."</span><br/>
           - A Satisfied Customer
         </div>
+        -->
       </div>
     </div>
 
@@ -88,9 +97,9 @@
               <img src="./static/face1.png" style="width:130px;height:130px" />
             </center>
 
-            <div style="color:#A2A2A2;text-align:center;margin-top:15px;font-family:Merriweather;">
+            <div style="color:#A2A2A2;text-align:center;margin-top:15px;font-family:Roboto;">
               <div>
-                <span style="color:#373737;font-size:24px">Jim Jimmerson</span>
+                <span class="face-name" >Jim Jimmerson</span>
               </div>
               <div style="color:#7F7F7F;margin-top:10px;margin-bottom:16px;">
                 <strong>
@@ -107,9 +116,9 @@
             <center>
               <img src="./static/face2.png" style="width:130px;height:130px" />
             </center>
-            <div style="color:#A2A2A2;text-align:center;margin-top:15px;font-family:Merriweather;">
+            <div style="color:#A2A2A2;text-align:center;margin-top:15px;font-family:Roboto;">
               <div>
-                <span style="color:#373737;font-size:24px">Jim Jimmerson</span>
+                <span class="face-name">Jim Jimmerson</span>
               </div>
               <div style="color:#7F7F7F;margin-top:10px;margin-bottom:16px;">
                 <strong>
@@ -120,11 +129,13 @@
               <div  style="color:#B3B3B3">
     Spent the 80's developing strategies for action figures in the UK. Crossed the country managing muffins in Minneapolis, MN. Gifted in building psoriasis in Los Angeles, CA. In 2009 I was researching tobacco in Minneapolis, MN.
               </div>
+              <!--
               <div style="text-align:right;margin-top:20px;">
                 <a href="/ffsf" style="color:#4144FF">&amp;twitter</a><br />
                 <a href="/ffsf" style="color:#4144FF">&amp;linkedinkedink</a>
 
               </div>
+              -->
             </div>
           </div>
 
@@ -133,9 +144,9 @@
               <img src="./static/face3.png" style="width:130px;height:130px" />
             </center>
 
-            <div style="color:#A2A2A2;text-align:center;margin-top:15px;font-family:Merriweather;">
+            <div style="color:#A2A2A2;text-align:center;margin-top:15px;font-family:Roboto">
               <div>
-                <span style="color:#373737;font-size:24px">Jim Jimmerson</span>
+                <span class="face-name">Jim Jimmerson</span>
               </div>
               <div style="color:#7F7F7F;margin-top:10px;margin-bottom:16px;">
                 <strong>
@@ -201,23 +212,23 @@
               &nbsp;
           </div>
 
-          <div class="step">
-            [0] reach out
-            <div style="font-size:14px;color:#000;padding-left:80px;font-family:roboto;">
+          <div>
+            <h3>reach out</h3>
+            <div style="font-size:14px;color:#000;font-family:roboto;">
               we're around. the perfect route would be to go out for a beer and talk. or a attend a talk one of us is doing. but the world is huge, so them email things are fine.
             </div>
           </div>
 
-          <div class="step">
-            [1] let's do something small<br/>
-            <div style="font-size:14px;color:#000;padding-left:80px;font-family:roboto;">
+          <div>
+            <h3>let's do something small</h3>
+            <div style="font-size:14px;color:#000;font-family:roboto;">
               we're not really into working with people we don't know - so a good idea to start would be to set up a tiny workshop or talk (over at your place) where we can get to know eachother - so we can help you out at least a bit, while getting to know you better.
             </div>
           </div>
 
-          <div class="step">
-            [2] let's build a relationship
-            <div style="font-size:14px;color:#000;padding-left:80px;font-family:roboto;">
+          <div>
+            <h3>let's build a relationship</h3>
+            <div style="font-size:14px;color:#000;font-family:roboto;">
               if we feel there's a vibe of understanding and common goals - let's go on and build a fantastic relationship.
             </div>
           </div>
@@ -320,6 +331,13 @@ Follow @TwitterDev</a>
 
     return t;
     }(document, "script", "twitter-wjs"));
+  </script>
+  <script>
+    $(document).ready(function() {
+      console.log('ready');
+        $('body').animate({ marginTop: 0, opacity: 1 }, 200);
+        
+    });
   </script>
 
 </body>
